@@ -11,7 +11,7 @@
             android:key="pref_key_server_host"
             android:title="Photo List URL"
             android:inputType="textUri"
-            android:defaultValue="https://raw.githubusercontent.com/wiwins/android-dreamscene/master/backgrounds.json">
+            android:defaultValue="https://raw.githubusercontent.com/wiwins/android-photo-screensaver/master/backgrounds.json">
         </EditTextPreference>
 
         <EditTextPreference
