@@ -34,7 +34,7 @@ public class PhotoScreensaverService extends DreamService {
     /**
      * Base URL path from where the screensaver photos are loaded.
      */
-    //private static final String PHOTOS_BASE_URL_PATH = "/photos";
+    private static final String PHOTOS_BASE_URL_PATH = "/photos";
 
     /**
      * URL path from where the list of photos is loaded.
