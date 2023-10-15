@@ -9,14 +9,16 @@
 
         <EditTextPreference
             android:key="pref_key_server_host"
-            android:title="Host"
-            android:inputType="textUri">
+            android:title="Photo List URL"
+            android:inputType="textUri"
+            android:defaultValue="https://raw.githubusercontent.com/wiwins/android-dreamscene/master/backgrounds.json">
         </EditTextPreference>
 
         <EditTextPreference
             android:key="pref_key_server_port"
             android:title="Port"
-            android:inputType="numberDecimal">
+            android:inputType="numberDecimal"
+            android:defaultValue="80">
         </EditTextPreference>
 
     </PreferenceCategory>
