@@ -105,13 +105,14 @@ public class PhotoScreensaverService extends DreamService {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         String host = prefs.getString("pref_key_server_host", null);
         String port = prefs.getString("pref_key_server_port", null);
-        return "http://" + host + ":" + port;
+        //return "http://" + host + ":" + port;
+        return host;
     }
 
     private String getPhotosListUrl() {
-        //String serverUrl = getServerUrl();
+        String serverUrl = getServerUrl();
         //return serverUrl + PHOTOS_LIST_URL_PATH;
-        return prefs.getString("pref_key_server_host", null );
+        return prefs.getString(serverUrl, null );
     }
 
     private String getPhotoUrl(String photo) {
