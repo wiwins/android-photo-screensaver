@@ -30,18 +30,18 @@ import java.util.concurrent.TimeUnit;
 public class PhotoScreensaverService extends DreamService {
 
     private static final String TAG = PhotoScreensaverService.class.getName();
-
+    
     /**
      * Base URL path from where the screensaver photos are loaded.
      */
-    private static final String PHOTOS_BASE_URL_PATH = "/photos";
+    //private static final String PHOTOS_BASE_URL_PATH = "/photos";
 
     /**
      * URL path from where the list of photos is loaded.
      * The server returns a JSON array with a list of all photos.
      */
-    private static final String PHOTOS_LIST_URL_PATH = PHOTOS_BASE_URL_PATH + "/list";
-
+    //private static final String PHOTOS_LIST_URL_PATH = PHOTOS_BASE_URL_PATH + "/list";
+    private static final String PHOTOS_LIST_URL_PATH = "https://raw.githubusercontent.com/wiwins/android-photo-screensaver/master/backgrounds.json";
 
 
     /**
@@ -109,8 +109,9 @@ public class PhotoScreensaverService extends DreamService {
     }
 
     private String getPhotosListUrl() {
-        String serverUrl = getServerUrl();
-        return serverUrl + PHOTOS_LIST_URL_PATH;
+        //String serverUrl = getServerUrl();
+        //return serverUrl + PHOTOS_LIST_URL_PATH;
+        return prefs.getString("pref_key_server_host", PHOTOS_LIST_URL_PATH );
     }
 
     private String getPhotoUrl(String photo) {
@@ -200,7 +201,8 @@ public class PhotoScreensaverService extends DreamService {
     private String getRandomPhotoUrl() {
         int randomIndex = new Random().nextInt(photos.size());
         String photo = photos.get(randomIndex);
-        return getPhotoUrl(photo);
+        //return getPhotoUrl(photo);
+        return photo;
     }
 
     private static List<String> jsonArrayToList(JSONArray jsonArray) {
