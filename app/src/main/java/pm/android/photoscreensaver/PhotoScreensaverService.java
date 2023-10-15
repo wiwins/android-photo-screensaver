@@ -112,7 +112,7 @@ public class PhotoScreensaverService extends DreamService {
     private String getPhotosListUrl() {
         String serverUrl = getServerUrl();
         //return serverUrl + PHOTOS_LIST_URL_PATH;
-        return prefs.getString(serverUrl, null );
+        return serverUrl;
     }
 
     private String getPhotoUrl(String photo) {
